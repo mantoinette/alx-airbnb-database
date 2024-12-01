@@ -1,0 +1,1 @@
+hello there i am working on the database script for the alx-airbnb project
