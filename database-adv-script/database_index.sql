@@ -1,5 +1,9 @@
 -- database_index.sql
 
+-- Measure query performance before adding indexes
+-- Example query to analyze
+EXPLAIN ANALYZE SELECT * FROM bookings WHERE user_id = 1;
+
 -- Create index on user_id in User table
 CREATE INDEX idx_user_id ON users(user_id);
 
@@ -23,3 +27,7 @@ CREATE INDEX idx_location ON properties(location);
 
 -- Create index on price in Property table
 CREATE INDEX idx_price ON properties(price);
+
+-- Measure query performance after adding indexes
+-- Example query to analyze
+EXPLAIN ANALYZE SELECT * FROM bookings WHERE user_id = 1;
