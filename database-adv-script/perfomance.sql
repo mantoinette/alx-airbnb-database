@@ -1,6 +1,7 @@
 -- performance.sql (updated)
 
--- Refactored query to retrieve all bookings with user, property, and payment details
+-- Analyze the performance of the query
+EXPLAIN ANALYZE 
 SELECT 
     b.booking_id,
     u.user_id,
